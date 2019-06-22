@@ -1,10 +1,10 @@
-<h1><%= @song.name %></h1>
+<h1><%= @song.title %></h1>
+binding.pry
+<p><%= link_to @song.artist_name, artist_path(@song.artist) %></p>
 
-<p><% link_to @song.artist.name, artist_path(@song.artist) %></p>
 
-
-  it "links to the artist" do
-    visit song_path(@song)
-    expect(page).to have_link("Daft Punk", href: artist_path(@artist))
-  end
+  # it "links to the artist" do
+  #   visit song_path(@song)
+  #   expect(page).to have_link("Daft Punk", href: artist_path(@artist))
+  # end
 
